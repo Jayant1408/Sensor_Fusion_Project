@@ -12,7 +12,7 @@
 
 ## Introduction
 
-<img src="Final_project_figures/my_tracking_results.gif" width="90%" height="90%" alt="Figure 1. Multi-target tracking results using camera-LiDAR fusion on Sequence 1 (frames 0–200) from the Waymo Open Dataset.">
+<img src="Final_project_figures/Tracking_results.gif" width="90%" height="90%">
 
 In this project, we developed a sensor fusion system capable of tracking multiple vehicles over time. Using real-world data from the `Waymo Open Dataset`, we fused 3D LiDAR detections with camera-based object detections generated in `Project 2.1`. These fused observations were processed through a custom-built non-linear `Extended Kalman Filter (EKF)`, paired with a comprehensive track management and data association pipeline. Our system reliably tracked vehicles across suburban scenes under various visibility conditions.
 
