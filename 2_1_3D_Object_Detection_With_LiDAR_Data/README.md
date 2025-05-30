@@ -4,11 +4,11 @@
 
 ---
 
-## 🚗 Project Overview
+## Project Overview
 
 This project explores 3D object detection using LiDAR point cloud data from the [Waymo Open Dataset](https://waymo.com/open). We implemented and evaluated deep learning-based models, specifically **SFA3D** and **Complex-YOLO**, to identify and classify objects such as vehicles, pedestrians, cyclists, and signs in urban driving environments.
 
-### ✅ Core Goals:
+### Core Goals:
 - Convert range images into 3D point clouds.
 - Preprocess data and visualize scenes using Open3D and OpenCV.
 - Run object detection using pre-trained deep learning models.
@@ -16,9 +16,9 @@ This project explores 3D object detection using LiDAR point cloud data from the 
 
 ---
 
-## 🔍 Project Workflow
+## Project Workflow
 
-### 🔰 Introduction
+### Introduction
 
 In this project, we developed a complete LiDAR-based object detection pipeline. Starting with raw `.tfrecord` files, we extracted, normalized, and visualized range images, then generated 3D point clouds and BEV (bird’s-eye view) maps. These were then fed into two detection models:
 
@@ -28,26 +28,26 @@ In this project, we developed a complete LiDAR-based object detection pipeline. 
 We benchmarked their performance using COCO-style metrics and visualized both ground-truth and predicted boxes in BEV and image space.
 
 <div align="center">
-  <img src="figures/midterm_report/2022-11-06-Figure-10-Detections-in-BEV-Shown-with-LiDAR-PCL-1.png" width="70%" alt="Figure: SFA3D detection results in BEV and camera image space">
+  <img src="Mid_term_project_figures\Detections-in-BEV-Shown-with-LiDAR-PCL-1_Image_7.png" width="70%" alt="Figure: SFA3D detection results in BEV and camera image space">
 </div>
 
-> 📌 *Green boxes indicate ground truth; red boxes show model predictions.*
+> *Green boxes indicate ground truth; red boxes show model predictions.*
 
 ---
 
-## 🔬 Range Image Analysis & Visibility Study
+## Range Image Analysis & Visibility Study
 
 As part of the midterm write-up requirements, we conducted a thorough inspection of vehicle visibility in the point cloud:
 
-### 🔹 Vehicle Visibility Examples:
+### Vehicle Visibility Examples:
 - Captured **10 distinct vehicles** across varying occlusion levels and angles.
 - Included both clear full-shape returns and partial detections (e.g., from oblique angles).
 
-### 🔹 Stable Features Identified:
+### Stable Features Identified:
 - **Rear bumpers** and **tail lights** consistently appeared across vehicles with high-intensity returns in LiDAR.
 - Other features such as roofs and license plates varied more depending on angle and distance.
 
-### 🔹 Range Image Findings:
+### Range Image Findings:
 - The **intensity channel** helped isolate strong reflectors like metal surfaces.
 - Several frames demonstrated how these intensity cues improved the BEV map's clarity.
 
@@ -55,7 +55,7 @@ Additional figures and discussion are available in the midterm report directory.
 
 ---
 
-## 🧪 Model Inference and Evaluation
+## Model Inference and Evaluation
 
 We performed inference using the following models:
 - **SFA3D** (ResNet18 + FPN)
@@ -68,7 +68,7 @@ We compared performance using:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 | File / Folder                   | Description |
 |-------------------------------|-------------|
@@ -80,20 +80,8 @@ We compared performance using:
 | `data/filenames.txt`          | List of input data files from Waymo. |
 | `setup.py`                    | Project installation and environment setup. |
 
----
 
-## ⚙️ Installation
-
-To set up the environment, simply run:
-```bash
-pip install --editable .
-```
-
-Ensure the required `.tfrecord` files are listed in `data/filenames.txt` and available locally.
-
----
-
-## 🧾 Notes
+## Notes
 
 - Visualizations were key to verifying detection performance and sensor alignment.
 - Object features such as tail lights and bumpers were essential for reliable tracking and classification.
