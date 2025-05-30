@@ -9,6 +9,6 @@
 * Apply learnings to complete two real-world AD/ADAS detection and tracking software programmes. 
 
 ### Projects
-* 2.1: [3D Object Detection with LiDAR Data](https://github.com/jonathanloganmoran/ND0013-Self-Driving-Car-Engineer/tree/main/2-Sensor-Fusion/2-1-3D-Object-Detection-with-LiDAR-Data);
-* 2.2: [Multi-Target Tracking with Extended Kalman filter (MTT with EKF)](https://github.com/jonathanloganmoran/ND0013-Self-Driving-Car-Engineer/tree/main/2-Sensor-Fusion/2-2-Multi-Target-Tracking-with-EKF).
+* 2.1: [3D Object Detection with LiDAR Data](https://github.com/Jayant1408/Sensor_Fusion_Project/tree/main/2_1_3D_Object_Detection_With_LiDAR_Data);
+* 2.2: [Multi-Target Tracking with Extended Kalman filter (MTT with EKF)](https://github.com/Jayant1408/Sensor_Fusion_Project/tree/main/2_2_Multi_Target_Tracking_with_EKF).
 
